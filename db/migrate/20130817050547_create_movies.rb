@@ -5,6 +5,8 @@ class CreateMovies < ActiveRecord::Migration
       t.text :description
       t.string :genre
       t.text :caste
+      t.boolean :show_ratings,                    :default => true
+      t.boolean :show_reviews,                    :default => true
 
       t.timestamps
     end

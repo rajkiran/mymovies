@@ -12,6 +12,9 @@ gem 'pg'
 end
 gem 'devise'
 
+gem 'ajaxful_rating', '3.0.0.beta8'
+
+
 
 
 # Gems used only for assets and not required

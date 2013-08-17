@@ -3,7 +3,7 @@ class MoviesController < ApplicationController
   # GET /movies.json
 
   def index
-    @movies = Movie.all
+    @movies = Movie.search(params[:search])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -52,6 +52,10 @@ class MoviesController < ApplicationController
         format.json { render json: @movie.errors, status: :unprocessable_entity }
       end
     end
+  end
+  def rate
+    @movie = Movie.find(params[:id])
+    @movie.rate(params[:stars], current_user, params[:dimension])
   end
 
   # PUT /movies/1

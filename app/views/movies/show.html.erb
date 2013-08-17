@@ -13,6 +13,7 @@
   <dd><%= @movie.genre %></dd>
   <dt><strong><%= model_class.human_attribute_name(:caste) %>:</strong></dt>
   <dd><%= @movie.caste %></dd>
+  <%= ratings_for @movie, :show_user_rating => true, :remote_options => {:url => rate_movie_path(@movie)}  %>
 </dl>
 
 <div class="form-actions">

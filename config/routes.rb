@@ -2,7 +2,10 @@ Mymovies::Application.routes.draw do
 
   devise_for :users
 
-  resources :movies
+  resources :movies do
+    post "rate",    :on => :member
+    get "movie_rating", :on=>:collection
+  end
 
 
   # The priority is based upon order of creation:
