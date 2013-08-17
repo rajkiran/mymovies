@@ -1,4 +1,7 @@
 Mymovies::Application.routes.draw do
+
+  devise_for :users
+
   resources :movies
 
 

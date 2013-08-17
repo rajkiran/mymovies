@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  # GET /movies
+  before_filter :authenticate_user!, :except => :index  # GET /movies
   # GET /movies.json
 
   def index

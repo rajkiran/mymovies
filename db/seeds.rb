@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+User.create(email: 'superadmin@mymovies.com',password: 'admin123',password_confimation: 'admin123',role: 'SuperAdministrator')
+

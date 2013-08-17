@@ -7,6 +7,7 @@
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:avatar) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:genre) %></th>
       <th><%= model_class.human_attribute_name(:caste) %></th>
@@ -19,6 +20,7 @@
       <tr>
         <td><%= link_to movie.id, movie_path(movie) %></td>
         <td><%= movie.name %></td>
+        <td><%= image_tag movie.avatar.url(:thumb)%></td>
         <td><%= movie.description %></td>
         <td><%= movie.genre %></td>
         <td><%= movie.caste %></td>
