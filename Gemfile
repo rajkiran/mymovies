@@ -7,6 +7,9 @@ gem 'rails', '3.2.12'
 
 gem 'mysql2'
 gem "paperclip", "~> 3.0"
+group :production do
+gem 'pg'
+end
 
 
 # Gems used only for assets and not required
